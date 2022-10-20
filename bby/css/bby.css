@@ -7,7 +7,86 @@
 .h0 { height: 0 !important; overflow:  hidden !important;
       padding: 0 !important; margin: 0 !important;
 }
-.navbar-inverse {
-    background-color: #f3482e;
+.d-block{
+    display: block;
 }
+.navbar-inverse {
+    background:linear-gradient(135deg, Violet, Orange)
+}
+
+#about img{
+    width: 250px; height: 250px;
+    border: 3px solid rgb(255, 210, 28);
+}
+.price{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+}
+
+#mainBanner {
+    background-image: url(../../img/mainImageR.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    max-height: 650px;
+    height: 0; padding-top: 0;
+}
+
+#Logo{
+    height: 200px; width: 200px;
+    margin-top: -45%;
+}
+
+#adBanner{
+    background-image: url(../img/aromaAd.jpg);
+    background-repeat: no-repeat;
+    background-color:   rgb(136, 99, 46);
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+aside.cta-quote {
+    padding: 50px 0 300px;
+ }
+
+@media(min-width:992px){
+
+   
+    aside.cta-quote {
+    padding: 200px 0;
+    }
+
+
+    #mainBanner {
+        background-size: contain;
+        height: 717px;
+        padding-top: 0;
+        background-image: url(../../img/mainImg.png);
+    }
+    #adBanner{
+        background-position: center;
+    }
+}
+
+@media (min-width: 768px){
+    aside.cta-quote {
+        background-attachment: scroll;
+        padding: 100px 0;
+    }
+    #adBanner{
+        text-align: center;
+        vertical-align: center;
+        background-position: center bottom;
+        background-size: auto 800px;
+        margin: auto;
+    }
+    #mainBanner{
+        
+    }
+    
+    #donate{
+        background-position: center;
+    }
+    }
 
