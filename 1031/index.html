@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사후 디지털 관리를 위한 자바스크립트(data 옵션 다루기);</title>
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous"></script>
+
+  <style>
+    .red{
+        background-color: red;
+    }
+    body{
+        background-repeat: none;
+        background-size: auto;
+        max-height: 100vh;
+    }
+   
+  </style>
+
+</head>
+<body>
+    <div class="btns">
+        <button  data-bgimg="http://skin-skin25.vivelab.cafe24.com/web/2022/banner0.jpg" data-title="이달의 신상">html에서관리</button>
+        <button  data-bgimg="http://skin-skin25.vivelab.cafe24.com/web/2022/banner1.jpg" data-title="특가할인">html에서관리</button>
+        <button  data-bgimg="http://skin-skin25.vivelab.cafe24.com/web/2022/banner2.jpg" data-title="멤버쉽혜택">html에서관리</button>
+    </div>
+
+    <script>
+
+            $('body').css('background-image',`url(`+$('.btns button').eq(0).data('bgimg')+`)`)
+
+            $('.btns button').each(function(){
+                $(this).html($(this).data('title')) 
+            })
+                
+            $('.btns button:not(#default)').click(function(){
+                $('body').css('background-image',`url(`+$(this).data('bgimg')+`)`)
+            })
+
+        
+    </script>
+</body>
+</html>
